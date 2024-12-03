@@ -1,0 +1,353 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Sidebar */
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  background: #fff;
+  width: 70px;
+  overflow-y: auto; /* usado para adcionar recorte ou uma barra de rolagem */
+  overflow-x: hidden;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+/* Scrollbar*/
+nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+nav::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 0 20px 20px 0;
+}
+
+nav::-webkit-scrollbar-thumb {
+  background-color: #F5004F;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+nav::-webkit-scrollbar-thumb:hover {
+  background-color: #d40042;
+}
+
+nav.expanded {
+  width: 250px; 
+
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: opacity 0.3s;
+}
+
+nav .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav .logo span {
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+nav.expanded .logo span {
+  opacity: 1;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+nav li a i {
+  font-size: 18px;
+  color: #f5004f;
+  background-color: transparent;
+  padding: 8px;
+}
+
+nav li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+nav li a img,
+nav li a i {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav li a .nav-item {
+  margin-left: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #080808;
+}
+
+nav.expanded li a .nav-item {
+  opacity: 1;
+}
+
+nav li a:hover {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.sidebar-toggle i {
+  font-size: 24px;
+  color: #080808;
+}
+
+#sidebar-toggle-text {
+  display: none;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f5004f;
+}
+
+nav.expanded .sidebar-toggle #sidebar-toggle-text {
+  display: inline;
+}
+.nav-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px; /* Ajuste conforme o espaço disponível */
+}
+
+/* Main content */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+}
+
+.card {
+  display: flex; 
+  flex-direction: row;
+  width: 780px;
+  height: 450px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+              rgba(0, 0, 0, 0.12) 0px -12px 30px,
+              rgba(0, 0, 0, 0.12) 0px 4px 6px,
+              rgba(0, 0, 0, 0.17) 0px 12px 13px,
+              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  gap: 20px; 
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  flex-direction: column;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+}
+
+.texto {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.name-main {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.email-main {
+  color: black;
+  font-weight: 200;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.sidebar-card {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background-color: #f0f0f0;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+#sidebar-card.open {
+  height: 300px;
+}
+
+.sidebar-card-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  color: #f5004f;
+  background-color: #fff;
+}
+
+#sidebar-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#sidebar-card.open #sidebar-items {
+  display: block;
+  margin-top: 10px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.sidebar-item i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #f5004f;
+}
+
+.sidebar-item .text {
+  display: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#sidebar-card.open .sidebar-item .text {
+  display: inline-block;
+}
+
+.add-aluno a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-aluno i {
+  font-size: 18px;
+  color: #f5004f;
+  margin-right: 10px;
+}
+
+.add-aluno .nav-item {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+nav.expanded .add-aluno .nav-item {
+  opacity: 1;
+}
+
+.add-aluno a:hover {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+a:link, a:visited, a:hover, a:focus {
+  color: black; /* Define a cor preta para todos os estados do link */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  nav {
+    width: 70px; /* Reduz a largura da sidebar em telas menores */
+  }
+
+  nav.expanded {
+    min-width: 200px; /* Largura da sidebar expandida em telas menores */
+  }
+
+  .container {  
+    flex-direction: column; /* Altera o layout do container */
+    height: auto; /* Altura automática */
+  }
+
+  .card {
+    width: 90%; /* Largura adaptativa do card */
+    flex-direction: column; /* Altera o layout do card */
+    height: auto; /* Altura automática do card */
+  }
+
+  .sidebar-card {
+    width: 80%; /* Largura adaptativa da sidebar card */
+  }
+}

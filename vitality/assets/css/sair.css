@@ -1,0 +1,88 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    background: #dfe9f5;
+    margin-left: 60px; 
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.logout-card {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
+}
+
+.logout-card h2 {
+    color: #F5004F; 
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.logout-card p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.btn-confirm {
+    background-color: #F5004F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover {
+    background-color: #d40042; 
+}
+
+
+.btn-cancel {
+    background-color: #FFAF00; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #e99c00; 
+}

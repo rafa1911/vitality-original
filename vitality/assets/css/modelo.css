@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 40px; /* Padding para envolver a área toda */
+  }
+  
+  .container {
+    text-align: center;
+    padding: 40px; /* Padding maior para envolver o título e os botões */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 42px; /* Tamanho do título aumentado */
+    color: #F5004F;
+    margin-bottom: 60px;
+  }
+  .table th, .table td {
+    padding: 12px; /* Aumenta o padding nas células da tabela */
+    text-align: center;
+}
+
+.table th {
+    padding-right: 20px; /* Espaço extra à direita da coluna 'Modelo' */
+}
+
+.table td {
+    padding-left: 20px; /* Espaço extra à esquerda da coluna 'Ações' */
+}
+
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Espaçamento entre os botões */
+    flex-wrap: nowrap; /* Os botões ficam lado a lado */
+  }
+  
+  .button {
+    background-color: #F5004F;
+    padding: 30px; /* Padding aumentado nos botões */
+    border-radius: 15px;
+    text-align: center;
+    width: 45%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Tamanho do texto do botão aumentado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  .button i {
+    font-size: 60px; /* Tamanho do ícone aumentado */
+    margin-bottom: 10px;
+  }
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #F5004F;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .back-button i {
+    margin-right: 10px;
+  }
+  
+  .back-button:hover {
+    transform: scale(1.05);
+  }
+  .btn-visualizar {
+    background-color: #F5004F; 
+    color: white;
+    padding: 10px 20px; 
+    text-decoration: none;
+    font-size: 18px; /* Tamanho do texto */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn-visualizar i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column; /* Em telas menores, os botões ficam um embaixo do outro */
+    }
+  
+    h1 {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px; /* Reduz o padding em telas muito pequenas */
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    .button i {
+      font-size: 50px;
+    }
+  
+    .button {
+      padding: 20px;
+    }
+  }
+  

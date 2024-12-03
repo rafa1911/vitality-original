@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 2px solid #F5004F;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #F5004F;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #F31559;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid #F5004f;
+}
+
+.form_header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form_header p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form_header a {
+    color: #F5004f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.form_header a:hover {
+    color: #F31559;
+}

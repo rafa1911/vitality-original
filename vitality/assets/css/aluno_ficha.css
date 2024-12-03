@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 40px; /* Padding para envolver a área toda */
+}
+
+.container {
+    text-align: center;
+    padding: 40px; /* Padding maior para envolver o título e os elementos */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 42px; /* Tamanho do título aumentado */
+    color: #F5004F;
+    margin-bottom: 30px;
+}
+
+.anamnese-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ficha-list {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ficha-item {
+    background-color: #F5004F; /* Cor do botão */
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre fichas */
+}
+
+.responder-button {
+    background-color: white; /* Cor do botão */
+    color: #F5004F; /* Texto do botão */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.responder-button:hover {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+.submit-button {
+    background-color: #F5004F; /* Rosa */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .responder-button,
+    .submit-button {
+        font-size: 16px;
+    }
+
+    .ficha-item {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .ficha-item {
+        padding: 10px;
+    }
+}

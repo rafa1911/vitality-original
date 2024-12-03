@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.foto-atual {
+    margin-bottom: 25px;
+}
+
+.foto-atual img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555555;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#file-chosen {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #777777;
+}
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #FFAF00;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[name="atualizar_foto"] {
+    background-color: #f5004f;
+}
+
+button[name="remover_foto_btn"] {
+    background-color: #f5004f;
+}
+
+.preview img {
+    display: none;
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}

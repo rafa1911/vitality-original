@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Modelo</title>
+    <link rel="stylesheet" href="../assets/css/criar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Criar Modelo de Ficha</h1>
+        <form method="POST" action="salvar_modelo.php">
+            <fieldset>
+                <legend>Dados do Modelo</legend>
+                <label for="titulo-modelo">Título do Modelo:</label>
+                <input type="text" id="titulo-modelo" name="titulo" required>
+
+                <label for="descricao-modelo">Descrição:</label>
+                <textarea id="descricao-modelo" name="modelo" rows="4" required></textarea>
+
+                <label for="tipo-pergunta">Tipo de Pergunta:</label>
+                <select id="tipo-pergunta" name="tipo-pergunta">
+                    <option value="text">Pergunta Simples</option>
+                    <option value="radio">Pergunta com Opções (Radio Buttons)</option>
+                    <option value="checkbox">Pergunta com Opções (Checkboxes)</option>
+                </select>
+
+                <label for="perguntas">Perguntas:</label>
+                <div id="perguntas-list">
+                </div>
+
+                <button type="button" id="adicionar-pergunta">Adicionar Pergunta</button>
+            </fieldset>
+
+            <button type="submit">Salvar Modelo</button>
+        </form>
+
+        <a href="./modelo.php" class="back-button">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('adicionar-pergunta').addEventListener('click', function () {
+            const perguntasList = document.getElementById('perguntas-list');
+            const tipoPergunta = document.getElementById('tipo-pergunta').value;
+            const index = perguntasList.childElementCount;
+            const novaPergunta = document.createElement('div');
+            novaPergunta.classList.add('pergunta-item');
+
+            let campoPergunta = `
+        <label for="pergunta-${index}">Pergunta:</label>
+        <input type="text" id="pergunta-${index}" name="perguntas[]" placeholder="Digite a pergunta" required>
+        <input type="hidden" name="tipo_pergunta[]" value="${tipoPergunta}">
+    `;
+
+            if (tipoPergunta === 'radio' || tipoPergunta === 'checkbox') {
+                campoPergunta += `
+            <div class="${tipoPergunta}-options">
+                <div class="${tipoPergunta}-option">
+                    <input type="text" name="opcoes[${index}][]" placeholder="Opção 1" required>
+                    <button type="button" class="remove-option">Remover</button>
+                </div>
+                <div class="${tipoPergunta}-option">
+                    <input type="text" name="opcoes[${index}][]" placeholder="Opção 2" required>
+                    <button type="button" class="remove-option">Remover</button>
+                </div>
+            </div>
+            <button type="button" class="add-option">Adicionar Opção</button>
+        `;
+            }
+
+            novaPergunta.innerHTML = campoPergunta;
+            perguntasList.appendChild(novaPergunta);
+
+            addOptionEventListeners();
+        });
+
+        function addOptionEventListeners() {
+            document.querySelectorAll('.add-option').forEach(button => {
+                button.addEventListener('click', function () {
+                    const container = this.previousElementSibling;
+                    const index = [...container.closest('.pergunta-item').parentElement.children].indexOf(container.closest('.pergunta-item'));
+                    const newOption = document.createElement('div');
+                    newOption.classList.add(container.classList.contains('radio-options') ? 'radio-option' : 'checkbox-option');
+                    newOption.innerHTML = `
+                <input type="text" name="opcoes[${index}][]" placeholder="Nova Opção" required>
+                <button type="button" class="remove-option">Remover</button>
+            `;
+                    container.appendChild(newOption);
+                    addOptionEventListeners();
+                });
+            });
+
+            document.querySelectorAll('.remove-option').forEach(button => {
+                button.addEventListener('click', function () {
+                    this.parentElement.remove();
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

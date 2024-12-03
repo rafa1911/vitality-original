@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #F5004F;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px 30px;
+    margin: 15px 0;
+    color: #f5004f;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#exercicios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.exercicio-card {
+    display: grid;
+    grid-template-columns: 40px 1fr 2fr;
+    align-items: center;
+    gap: 20px;
+    width: 90%; /* Faz o card ocupar a largura total */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.video-container video {
+    width: 100%; /* Faz o vídeo ocupar o espaço disponível */
+    max-width: 250px; /* Limita o tamanho máximo do vídeo */
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-container {
+    flex-grow: 1; /* Permite que as informações cresçam conforme necessário */
+    text-align: left;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ocupa todo o espaço disponível */
+}
+
+
+
+.video-container video {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.info-container p {
+    margin: 5px 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+.treino-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#iniciar-treino {
+    padding: 10px 20px;
+    border: none;
+    background-color: #F5004F;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#iniciar-treino:hover {
+    background-color: #c0043d;
+    transform: scale(1.05);
+}
+/* Estilo para todos os checkboxes */
+input[type="checkbox"] {
+    /* Remover aparência padrão */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f5004f; /* Borda rosa */
+    border-radius: 50%; /* Deixa redondo */
+    cursor: pointer;
+    position: relative;
+    background-color: #fff; /* Fundo branco */
+    transition: all 0.3s ease;
+  }
+  
+
+  
+  /* Aparência ao marcar */
+  input[type="checkbox"]:checked {
+    background-color: #f5004f; /* Fundo rosa */
+    border-color: #f5004f; /* Borda rosa */
+  }
+  
+  /* Estilo para os ícones (opcional, se precisar de algo visual interno no checkbox) */
+  input[type="checkbox"]:checked::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* Marcador branco */
+    border-radius: 50%; /* Bolinha no centro */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Estilo para todos os checkboxes */
+input[type="checkbox"] {
+    /* Remover aparência padrão */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f5004f; /* Borda rosa */
+    border-radius: 50%; /* Deixa redondo */
+    cursor: pointer;
+    position: relative;
+    background-color: #fff; /* Fundo branco */
+    transition: all 0.3s ease;
+  }
+
+  
+  /* Aparência ao marcar */
+  input[type="checkbox"]:checked {
+    background-color: #f5004f; /* Fundo rosa */
+    border-color: #f5004f; /* Borda rosa */
+  }
+  
+  /* Estilo para os ícones (opcional, se precisar de algo visual interno no checkbox) */
+  input[type="checkbox"]:checked::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* Marcador branco */
+    border-radius: 50%; /* Bolinha no centro */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: #F5004F;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0043d;
+}
+.back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #F5004F;
+    text-decoration: none;
+    cursor: pointer;
+}

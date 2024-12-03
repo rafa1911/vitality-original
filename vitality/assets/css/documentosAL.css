@@ -1,0 +1,175 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    margin-left: 80px; /* Space for the sidebar */
+    transition: margin-left 0.3s ease;
+}
+/* Estilo do Cabeçalho */
+#page-header {
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Formulário */
+.document-form {
+    background: #fff;
+    padding: 15px; /* Reduzido */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Reduzido */
+    margin: 0 auto;
+}
+
+/* Estilo do Texto da Descrição */
+.document-form textarea {
+    width: 100%; /* Garantir que a área de texto ocupe a largura total do container */
+    font-size: 16px;
+    padding: 12px; /* Aumentar o padding para mais conforto ao digitar */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Espaço abaixo do campo de descrição */
+    resize: vertical; /* Permitir que o usuário ajuste a altura do campo de texto */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+/* Ajuste do Label para Descrição */
+.document-form label[for="description"] {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500; 
+}
+
+/* Estilo do Input de Arquivo */
+.document-form input[type="file"] {
+    display: none; /* Oculta o input padrão */
+}
+
+/* Estilo do Label de Envio de Arquivo */
+.document-form label[for="document"] {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px; /* Espaço abaixo do label */
+    font-weight: 500; 
+}
+
+/* Estilo do Botão Personalizado */
+.custom-file-upload {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px; /* Ajuste o padding para diminuir o tamanho */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    color: #fff;
+    background-color: #F5004F; 
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+    width: 170px;
+    height: 40px;
+}
+
+.custom-file-upload:hover {
+    background-color: #c40036; 
+}
+
+.custom-file-upload i {
+    margin-right: 6px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo do Botão de Envio */
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: #F5004F;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c40036;
+}
+
+.back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #F5004F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Estilo do Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+    position: relative; /* Adicionar para o posicionamento do ícone de fechamento */
+}
+
+.popup p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Ícone de Fechar */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup-close:hover {
+    color: #F5004F;
+}
+
+#popup-message {
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+    color: #333; /* Define a cor do texto */
+    margin-top: 20px;
+}

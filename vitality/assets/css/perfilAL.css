@@ -1,0 +1,212 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #dfe9f5;
+    margin: 0; /* Remove qualquer margem adicional */
+    display: flex; /* Adicionado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
+    transition: margin-left 0.3s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Altura adaptável ao conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+
+/* Ajustes no card */
+.card {
+    width: 650px;
+    height: auto; /* Ajusta ao conteúdo */
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-content {
+    display: flex; /* Usar flex para organizar a foto e o nome ao lado dos botões */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.texto {
+    text-align: center;
+    margin-top: 20px;
+    flex: 1; /* Para que a seção de texto ocupe o espaço restante */
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.name-main {
+    color: black;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.email-main {
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 20px; 
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 20px; /* Espaçamento superior */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+.btn {
+    padding: 10px 20px; /* Ajusta o padding dos botões */
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    background-color: #F5004F;
+    color: #fff;
+    flex: 1; /* Permite que os botões cresçam para ocupar o espaço disponível */
+    min-width: 120px; /* Largura mínima para os botões */
+}
+.back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #F5004F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.delete-icon {
+    position: absolute;
+    top: 15px; /* Ajuste conforme necessário */
+    right: 15px; /* Ajuste conforme necessário */
+    cursor: pointer; /* Indica que é clicável */
+    color: #F5004F; /* Cor do ícone */
+    font-size: 20px; /* Tamanho do ícone */
+}
+
+.delete-icon:hover {
+    color: #c40036; /* Cor ao passar o mouse */
+}
+
+.content {
+    position: relative; /* Para que o ícone se posicione em relação a este container */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        margin-left: 0; /* Remove a margem em telas pequenas */
+    }
+
+    nav {
+        width: 70px; /* Reduz a largura da sidebar em telas menores */
+    }
+
+    nav.expanded {
+        width: 200px; /* Reduz a largura da sidebar expandida em telas menores */
+    }
+
+    .card {
+        width: 90%; /* Largura do card ajustada para telas pequenas */
+        margin-top: 20px; /* Ajusta a margem superior do card */
+    }
+
+    .card-content {
+        flex-direction: column; /* Empilha a foto e os botões verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .foto-perfil {
+        width: 120px; /* Tamanho reduzido da foto de perfil */
+        height: 120px; /* Tamanho reduzido da foto de perfil */
+    }
+
+    .name-main {
+        font-size: 20px; /* Tamanho de fonte reduzido */
+    }
+
+    .email-main {
+        font-size: 14px; /* Tamanho de fonte reduzido */
+    }
+
+    .button {
+        width: 100%; /* Botões ocupam toda a largura do card */
+        gap: 10px; /* Espaçamento reduzido entre os botões */
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam toda a largura */
+    }
+
+    .delete-icon {
+        right: 10px; /* Ajusta a posição do ícone */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 70px; /* Largura da sidebar em dispositivos muito pequenos */
+    }
+
+    nav.expanded {
+        width: 250px; /* Largura da sidebar expandida em dispositivos muito pequenos */
+    }
+
+    .card {
+        margin: 10px; /* Adiciona margem ao card */
+    }
+
+    .foto-perfil {
+        width: 100px; /* Tamanho reduzido da foto de perfil */
+        height: 100px; /* Tamanho reduzido da foto de perfil */
+    }
+
+    .name-main {
+        font-size: 18px; /* Tamanho de fonte reduzido */
+    }
+
+    .email-main {
+        font-size: 12px; /* Tamanho de fonte reduzido */
+    }
+}

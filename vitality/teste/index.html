@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Visualizar Treino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="perfilAL.php" class="back-icon">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="container">
+        <!-- Tela de Treinos Disponíveis -->
+        <div id="treinos-disponiveis" class="section">
+            <h1>Treinos Disponíveis</h1>
+            <ul id="lista-treinos">
+                <li onclick="carregarTreino('Treino A')">Treino A</li>
+                <li onclick="carregarTreino('Treino B')">Treino B</li>
+                <li onclick="carregarTreino('Treino C')">Treino C</li>
+            </ul>
+        </div>
+
+        <div id="treino-selecionado" class="section" style="display: none;">
+            <a href="perfilAL.php" class="back-icon">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>    
+            <div class="treino-header">
+                <h1 id="titulo-treino"></h1>
+                <button id="iniciar-treino" onclick="iniciarTreino()">Iniciar Treino</button>
+            </div>
+            <div id="exercicios-container">
+                <!-- Exercícios serão carregados aqui -->
+            </div>
+            <button id="finalizar-treino" onclick="finalizarTreino()">Finalizar Treino</button>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

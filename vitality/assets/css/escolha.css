@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --color-light-50: #f8fafc;
+    --color-dark-900: #000;
+
+    --color-background: #fafafa; /* Variável para a cor de fundo */
+    --color-orange-50:  #FF6500; /* Cor para o botão e bolinhas de seleção */
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--color-background); /* Usando variável para a cor de fundo */
+}
+
+#choice-screen,
+#next-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#choice-screen {
+    background: var(--color-background); /* Usando variável para a cor de fundo */
+    z-index: 1;
+}
+
+#next-screen {
+    background: white;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+#next-screen.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+
+#login_form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    width: 400px;
+}
+
+#form_header {
+    display: flex;
+}
+
+#form_header h1 {
+    font-size: 40px;
+    position: relative;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100px;
+}
+
+.input-box label {
+    font-size: 15px;
+    color: var(--color-dark-900);
+}
+
+.input-field {
+    gap: 15px; 
+    font-size: 24px;
+}
+
+.input-field input {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    transform: scale(1.5); /* Ajuste o valor conforme necessário */
+    margin-right: 10px;
+}
+
+#login_button {
+    border: none;
+    background: transparent; /* Remover cor de fundo */
+    color: var(--color-orange-50); /* Cor do texto do botão */
+    padding: 7px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid var(--color-orange-50); /* Adiciona uma borda para visibilidade */
+}
+
+#login_button:hover {
+    transform: scale(1.05);
+}
+
+/* Custom radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color-orange-50);
+    border-radius: 50%;
+    background: #fff;
+}
+
+input[type="radio"]:checked + label::before {
+    background: var(--color-orange-50);
+}
+
+input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 9px;
+    height: 9px;
+}
+
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ff0000;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+

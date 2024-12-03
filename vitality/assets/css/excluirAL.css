@@ -1,0 +1,71 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #dfe9f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #F5004F;
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #000;
+}
+
+.confirm-btn:hover {
+    background-color: #c40036;
+}
+
+.cancel-btn:hover {
+    background-color: #b0b0b0;
+}

@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #F5004F;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+select, input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select {
+    border: 2px solid #F5004F;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGxpbmUgeDE9IjExIiB5MT0iMSIgeDI9IjYiIHkyPSI3IiBzdHJva2U9IiM2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjAiIHkxPSIxIiB4Mj0iNiIgeTI9IjciIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select:focus {
+    border-color: #FFAF00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 175, 0, 0.5);
+}
+
+button {
+    background-color: #F5004F;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #FFAF00;
+}
+
+.back-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 34px;
+    color: #F5004F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#mensagens {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

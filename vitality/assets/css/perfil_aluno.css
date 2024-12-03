@@ -1,0 +1,377 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Ajustes na margem do body */
+body {
+    background: #dfe9f5;
+    margin-left: 80px; 
+}
+
+/* Sidebar */
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 80px; 
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+nav.expanded {
+    width: 250px; 
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: opacity 0.3s;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav .logo span {
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+nav.expanded .logo span {
+    opacity: 1; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; 
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+/* Estilo para os ícones na barra lateral */
+nav li a i {
+    font-size: 18px; 
+    color: #F5004F; 
+    background-color: transparent;
+    padding: 8px; 
+}
+
+nav li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+nav li a img,
+nav li a i {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav li a .nav-item {
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #080808;
+}
+
+nav.expanded li a .nav-item {
+    opacity: 1;
+}
+
+nav li a:hover {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Sidebar Toggle Button dentro do nav */
+.sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sidebar-toggle i {
+    font-size: 24px;
+    color: #080808;
+}
+
+#sidebar-toggle-text {
+    display: none;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #F5004F;
+}
+
+nav.expanded .sidebar-toggle #sidebar-toggle-text {
+    display: inline;
+}
+
+/* Positioning for Ajuda and Sair icons */
+.ajuda-logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    width: 90%; /* Adjust width to fit both icons */
+}
+
+.ajuda-logout a {
+    flex: 1; /* Ensure both icons take equal space */
+    text-align: center;
+}
+
+/* Align icons and text properly */
+.ajuda-logout i {
+    font-size: 18px;
+    color: #F5004F;
+    background-color: transparent;
+    padding: 8px;
+}
+
+/* interface vizualização do aluno */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+}
+
+/* Ajustes no card */
+.card {
+    width: 650px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: -50px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Ajustes no conteúdo do card */
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+/* Estilo da imagem do personal */
+.imagem {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo do texto */
+.texto {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo da foto do personal */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Estilo do nome e email */
+.name-main {
+    color: black;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.email-main {
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 20px; /* Espaço entre o email e o botão */
+}
+
+.button {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 25px; /* Espaçamento entre os botões */
+    width: 100%;
+    margin-top: 20px; /* Espaçamento acima dos botões */
+}
+/* Estilo dos botões */
+.btn {
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    background-color: #F5004F;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo do Pop-up */
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
+.popup-content {
+    background-color: #fff; /* Fundo do conteúdo do pop-up */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 400px; /* Largura do pop-up */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Para posicionar o botão de fechar */
+}
+
+.popup-image {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Para imagem circular */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #F5004F; /* Cor do botão de fechar */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #c4003b; /* Cor ao passar o mouse */
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    body {
+        margin-left: 0; /* Remove margem à esquerda */
+    }
+
+    nav {
+        width: 60px; /* Largura da sidebar reduzida */
+    }
+
+    nav.expanded {
+        width: 200px; /* Largura da sidebar expandida */
+    }
+
+    .card {
+        width: 90%; /* Largura do card ajustada para telas menores */
+        height: auto; /* Altura automática para melhor ajuste */
+    }
+
+    .foto-perfil {
+        width: 100px; /* Dimensões da foto do personal reduzidas */
+        height: 100px;
+    }
+
+    .name-main {
+        font-size: 20px; /* Tamanho da fonte reduzido */
+    }
+
+    .email-main {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+
+    .button {
+        flex-direction: column; /* Botões em coluna em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 70px; /* Largura da sidebar ainda mais reduzida */
+    }
+
+    nav.expanded {
+        width: 250px; /* Largura da sidebar expandida */
+    }
+
+    .card {
+        width: 95%; /* Largura do card ajustada ainda mais para telas pequenas */
+    }
+
+    .name-main {
+        font-size: 18px; /* Tamanho da fonte reduzido */
+    }
+
+    .email-main {
+        font-size: 12px; /* Tamanho da fonte reduzido */
+    }
+
+    .btn {
+        padding: 8px 20px; /* Tamanho do botão reduzido */
+        font-size: 14px; /* Tamanho da fonte do botão reduzido */
+    }
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    /* ... (outros estilos) ... */
+
+    .button {
+        flex-direction: row; /* Alinha os botões em linha */
+        justify-content: center; /* Garante que fiquem centralizados */
+    }
+}
+
+@media (max-width: 480px) {
+    /* ... (outros estilos) ... */
+
+    .button {
+        flex-direction: column; /* Alinha os botões em coluna */
+        align-items: center; /* Centraliza os botões na coluna */
+    }
+}

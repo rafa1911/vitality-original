@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 40px; /* Padding para envolver a área toda */
+  }
+  
+  .container {
+    text-align: center;
+    padding: 40px; /* Padding maior para envolver o título e os elementos */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  h1 {
+    font-size: 42px; /* Tamanho do título aumentado */
+    color: #F5004F;
+    margin-bottom: 30px;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #F5004F;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .back-button i {
+    margin-right: 10px;
+  }
+  
+  .back-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .model-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .model-item {
+    background-color: #F5004F;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .model-item i {
+    font-size: 40px;
+    margin-right: 15px;
+  }
+  
+  .model-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+  
+    .back-button {
+      font-size: 16px;
+    }
+  
+    .model-item {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    .model-item i {
+      font-size: 35px;
+    }
+  
+    .model-item {
+      padding: 15px;
+    }
+  }
+  
